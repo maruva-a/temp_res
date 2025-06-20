@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   background-color:rgb(241, 156, 218) ;
+ 
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(background2.jpg);
+    background-repeat: no-repeat;
+    background-position: right; */
+    
+}
+.container{
+    padding: 10px 10%;
+    background-color: skyblue;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 150px;
+border-radius: 50%;
+border: 1px solid white;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+content: '';
+width: 0;
+height: 3px;
+background:  rgb(181, 76, 237);
+position: absolute;
+left: 0;
+bottom: -6px;
+transition: 0.5s;
+}
+nav ul li a:hover::after{
+width: 100%;
+
+}
+nav .fa-solid{
+    display: none;
+}
+.sec{
+    margin: 30px;
+    padding: 20px 10px;
+}
+
+@media only screen and (max-width: 600px){
+    /*.header-text{
+     margin-top: 100%;
+     font-size: 16px;
+    }
+    .header-text h1{
+     font-size: 30px;
+    } */
+    nav .fa-solid{
+     display: block;
+     font-size: 25px;
+ }
+ nav ul{
+     background:rgb(57, 122, 235) ;
+     position: fixed;
+     top: 0;
+     right: -200px;
+     width: 200px;
+     height: 100vh;
+     padding-top: 50px;
+     z-index: 2;
+     transition: right 0.5s;
+ }
+ nav ul li{
+     display: block;
+     margin: 25px;
+ }
+ nav ul .fa-solid{
+     position: absolute;
+     top: 25px;
+     left: 25px;
+     cursor: pointer;
+ }
+}
